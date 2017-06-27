@@ -59,8 +59,8 @@ public class AuctionFrontendVerticle extends AbstractVerticle {
         router.route().consumes("application/json");
         router.route().produces("application/json");
 
-        router.get("/auctions/:id").handler(ProxyHandler.create("localhost", 8081));
-        router.patch("/auctions/:id").handler(ProxyHandler.create("localhost", 8081));
+        router.get("/auctions/:id").handler(ProxyHandler.create("localhost", 8088));
+        router.patch("/auctions/:id").handler(ProxyHandler.create("localhost", 8088));
 
         return router;
     }

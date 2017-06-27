@@ -18,7 +18,7 @@ public class SockJSBridgeVerticle extends AbstractVerticle {
         Router router = Router.router(vertx);
         router.route("/eventbus/*").handler(eventBusHandler());
 
-        vertx.createHttpServer().requestHandler(router::accept).listen(8082);
+        vertx.createHttpServer().requestHandler(router::accept).listen(8888);
     }
 
     private SockJSHandler eventBusHandler() {

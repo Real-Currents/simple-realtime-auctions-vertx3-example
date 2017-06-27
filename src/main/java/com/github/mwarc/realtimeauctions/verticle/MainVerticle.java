@@ -33,5 +33,7 @@ public class MainVerticle extends AbstractVerticle {
                 logger.error("AuctionFrontendVerticle deployment failed!");
             }
         });
+
+        return;
     }
 }

@@ -21,7 +21,7 @@ public class AuctionServiceVerticle extends AbstractVerticle {
         router.route(HttpMethod.PATCH, "/api/*").handler(jwtAuthHandler());
         router.mountSubRouter("/api", auctionApiRouter());
 
-        vertx.createHttpServer().requestHandler(router::accept).listen(8081);
+        vertx.createHttpServer().requestHandler(router::accept).listen(8088);
     }
 
     private JWTAuthHandler jwtAuthHandler() {
